@@ -40,3 +40,5 @@ User can add, remove, edit their trips along with the destination, flight inform
 User can view weather of their trip destination as well as nearby places.
 
 Note: you can find the design, presentation of the application to the pdf attached.
+
+https://youtu.be/vyA6ugel7RY
