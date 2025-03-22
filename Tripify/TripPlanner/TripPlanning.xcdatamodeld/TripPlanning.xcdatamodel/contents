@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Accommodation" representedClassName="Accommodation" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="checkinDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="checkoutDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="addToTrip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="addToAccommodation" inverseEntity="Trip"/>
+    </entity>
+    <entity name="Flight" representedClassName="Flight" syncable="YES" codeGenerationType="class">
+        <attribute name="airline" optional="YES" attributeType="String"/>
+        <attribute name="arrival" optional="YES" attributeType="String"/>
+        <attribute name="departure" optional="YES" attributeType="String"/>
+        <attribute name="flightnum" optional="YES" attributeType="String"/>
+        <relationship name="addToTripfy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="addToFlight" inverseEntity="Trip"/>
+    </entity>
+    <entity name="Trip" representedClassName="Trip" syncable="YES" codeGenerationType="class">
+        <attribute name="destination" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="addToAccommodation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Accommodation" inverseName="addToTrip" inverseEntity="Accommodation"/>
+        <relationship name="addToFlight" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Flight" inverseName="addToTripfy" inverseEntity="Flight"/>
+    </entity>
+    <elements>
+        <element name="Accommodation" positionX="160" positionY="192" width="128" height="104"/>
+        <element name="Flight" positionX="160" positionY="192" width="128" height="104"/>
+        <element name="Trip" positionX="160" positionY="192" width="128" height="119"/>
+    </elements>
+</model>

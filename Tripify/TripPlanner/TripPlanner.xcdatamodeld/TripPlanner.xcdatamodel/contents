@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Accommodation" representedClassName="Accommodation" syncable="YES" codeGenerationType="class">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="checkinDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="checkoutDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Flight" representedClassName="Flight" syncable="YES" codeGenerationType="class">
+        <attribute name="airline" optional="YES" attributeType="String"/>
+        <attribute name="arrival" optional="YES" attributeType="String"/>
+        <attribute name="departure" optional="YES" attributeType="String"/>
+        <attribute name="flightnum" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Trip" representedClassName="Trip" syncable="YES" codeGenerationType="class">
+        <attribute name="destination" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="addToAccommodations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Accommodation"/>
+    </entity>
+    <elements>
+        <element name="Trip" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Accommodation" positionX="-63" positionY="9" width="128" height="89"/>
+        <element name="Flight" positionX="-54" positionY="36" width="128" height="89"/>
+    </elements>
+</model>
